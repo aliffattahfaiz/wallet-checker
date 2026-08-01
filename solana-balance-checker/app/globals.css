@@ -1,0 +1,57 @@
+:root {
+  --ink: #0a0e17;
+  --surface: #121826;
+  --surface-raised: #171f30;
+  --line: #232c3f;
+  --text-primary: #e7eaf0;
+  --text-muted: #8b93a7;
+  --text-faint: #5a6478;
+  --purple: #9945ff;
+  --teal: #14f195;
+  --danger: #ff6b6b;
+  --gradient: linear-gradient(90deg, var(--purple), var(--teal));
+  --font-ui: var(--font-sans), system-ui, sans-serif;
+  --font-data: var(--font-mono), ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--ink);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--purple);
+  color: white;
+}
+
+a {
+  color: inherit;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
